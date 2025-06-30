@@ -1,0 +1,27 @@
+# A map of chain names to ChainMetadata
+# Chains can be defined here, in chains.json, or in chains.ts
+# Chains already in the SDK need not be included here unless you want to override some fields
+# Schema here: https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/metadata/chainMetadataTypes.ts
+---
+davinci:
+  blockExplorers:
+    - apiUrl: https://mainnet-explorer.davinci.bz/api
+      family: blockscout
+      name: davinciscan
+      url: https://mainnet-explorer.davinci.bz
+  chainId: 293
+  displayName: Davinci
+  displayNameShort: DCOIN
+  domainId: 293
+  isTestnet: true
+  name: davinci
+  nativeToken:
+    decimals: 18
+    name: DaVinci
+    symbol: DCOIN
+  protocol: ethereum
+  rpcUrls:
+    - http: https://rpc.davinci.bz
+  technicalStack: other
+  logoURI: https://raw.githubusercontent.com/davinchi-protocol/branding-kit/refs/heads/main/logo-network/davinci-logo.svg
+

@@ -1,0 +1,16 @@
+export const links = {
+  home: 'https://davinci.bz',
+  explorer: 'https://mainnet-explorer.davinci.bz',
+  discord: '',
+  github: 'https://github.com/davinchi-protocol',
+  docs: 'https://docs.davinci.bz',
+  warpDocs: '',
+  gasDocs: '',
+  chains: 'https://cdn.jsdelivr.net/gh/davinchi-protocol/bridge-registry@main/chains/metadata.yaml',
+  twitter: 'https://x.com/davincidcoin',
+  blog: '',
+  tos: 'https://davinci.bz/terms-of-service',
+  privacyPolicy: 'https://davinci.bz/privacy-policy',
+  bounty: '',
+  imgPath: 'https://cdn.jsdelivr.net/gh/davinchi-protocol/bridge-registry@main',
+};
