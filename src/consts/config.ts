@@ -2,7 +2,7 @@ import { ChainMap } from '@hyperlane-xyz/sdk';
 import { ProtocolType } from '@hyperlane-xyz/utils';
 import { ADDRESS_BLACKLIST } from './blacklist';
 
-const isDevMode = process?.env?.NODE_ENV === 'development';
+const isDevMode = process?.env?.NODE_ENV === 'production';
 const version = process?.env?.NEXT_PUBLIC_VERSION || '0.0.0';
 const registryUrl = process?.env?.NEXT_PUBLIC_REGISTRY_URL || undefined;
 const registryBranch = process?.env?.NEXT_PUBLIC_REGISTRY_BRANCH || undefined;
