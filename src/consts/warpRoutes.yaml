@@ -6,18 +6,18 @@
 # The input here is typically the output of the Hyperlane CLI warp deploy command
 ---
 tokens:
-  - addressOrDenom: "0xF2B3e3Ac328F1bd7D26274774b3e91696152c7eD"
+  - addressOrDenom: "0x7b5B8164dd6B983e1b848FF8B3F8F9Ce4ff6Bd68"
     chainName: davinci
     connections:
-      - token: ethereum|optimism|0xF2B3e3Ac328F1bd7D26274774b3e91696152c7eD
+      - token: ethereum|optimism|0x95De66444e4253672494c1B0d6860D4EE1e2c2DE
     decimals: 18
     name: DaVinci
     standard: EvmHypNative
     symbol: DCOIN
-  - addressOrDenom: "0xF2B3e3Ac328F1bd7D26274774b3e91696152c7eD"
+  - addressOrDenom: "0x95De66444e4253672494c1B0d6860D4EE1e2c2DE"
     chainName: optimism
     connections:
-      - token: ethereum|davinci|0xF2B3e3Ac328F1bd7D26274774b3e91696152c7eD
+      - token: ethereum|davinci|0x7b5B8164dd6B983e1b848FF8B3F8F9Ce4ff6Bd68
     decimals: 18
     name: DaVinci
     standard: EvmHypSynthetic
