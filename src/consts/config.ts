@@ -7,10 +7,11 @@ const version = process?.env?.NEXT_PUBLIC_VERSION || '0.0.0';
 const registryUrl = process?.env?.NEXT_PUBLIC_REGISTRY_URL || undefined;
 const registryBranch = process?.env?.NEXT_PUBLIC_REGISTRY_BRANCH || undefined;
 const registryProxyUrl = process?.env?.NEXT_PUBLIC_GITHUB_PROXY || 'https://proxy.hyperlane.xyz';
-const walletConnectProjectId = process?.env?.NEXT_PUBLIC_WALLET_CONNECT_ID || '92347c0b62140e27bab13abbb63175e6';
+const walletConnectProjectId =
+  process?.env?.NEXT_PUBLIC_WALLET_CONNECT_ID || '92347c0b62140e27bab13abbb63175e6';
 const transferBlacklist = process?.env?.NEXT_PUBLIC_TRANSFER_BLACKLIST || '';
 const chainWalletWhitelists = JSON.parse(process?.env?.NEXT_PUBLIC_CHAIN_WALLET_WHITELISTS || '{}');
-const rpcOverrides = process?.env?.NEXT_PUBLIC_RPC_OVERRIDES || 'https://rpc.davinci.bz';
+const rpcOverrides = process?.env?.NEXT_PUBLIC_RPC_OVERRIDES || 'https://rpc-bridge.davinci.bz';
 
 interface Config {
   addressBlacklist: string[]; // A list of addresses that are blacklisted and cannot be used in the app
