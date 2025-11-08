@@ -36,7 +36,7 @@
     "@starknet-react/chains": "^3.1.2",
     "@starknet-react/core": "^3.7.2",
     "@tanstack/react-query": "^5.59.20",
-    "@vercel/analytics": "^1.4.0",
+    "@vercel/analytics": "^1.5.0",
     "@vercel/functions": "^1.5.0",
     "bignumber.js": "^9.1.2",
     "buffer": "^6.0.3",
@@ -51,7 +51,7 @@
     "starknetkit": "2.6.1",
     "viem": "^2.21.41",
     "wagmi": "^2.12.26",
-    "zod": "3.21.4",
+    "zod": "patch:zod@npm%3A3.25.76#~/.yarn/patches/zod-npm-3.25.76-7de26333f8.patch",
     "zustand": "^4.4.7"
   },
   "devDependencies": {
@@ -66,7 +66,9 @@
     "eslint": "^9.14.0",
     "eslint-config-next": "^15.0.2",
     "eslint-config-prettier": "^9.1.0",
+    "patch-package": "^8.0.1",
     "postcss": "^8.4.47",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "^3.2.5",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.8",
@@ -109,6 +111,14 @@
     "lit-html": "2.8.0",
     "react-fast-compare": "^3.2",
     "viem": "^2.21.41",
-    "zustand": "^4.4"
+    "zustand": "^4.4",
+    "@cosmjs/math": "0.32.4",
+    "@cosmjs/proto-signing": "0.32.4",
+    "@cosmjs/stargate": "0.32.4",
+    "@cosmjs/cosmwasm-stargate": "0.32.4",
+    "@cosmjs/amino": "0.32.4",
+    "@cosmjs/encoding": "0.32.4",
+    "@cosmjs/crypto": "0.32.4",
+    "zod@*": "patch:zod@npm%3A3.25.76#~/.yarn/patches/zod-npm-3.25.76-7de26333f8.patch"
   }
 }

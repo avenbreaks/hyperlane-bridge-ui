@@ -15,19 +15,22 @@ const FRAME_SRC_HOSTS = [
   'https://*.walletconnect.org',
   'https://cdn.solflare.com',
 ];
-const STYLE_SRC_HOSTS = [];
+const STYLE_SRC_HOSTS = [
+  'https://fonts.googleapis.com',
+];
 const IMG_SRC_HOSTS = [
   'https://*.walletconnect.com',
   'https://*.githubusercontent.com',
   'https://cdn.jsdelivr.net/gh/hyperlane-xyz/hyperlane-registry@main/',
+  'https://cdn.jsdelivr.net/gh/davinchi-protocol/bridge-registry@main/',
 ];
 const cspHeader = `
   default-src 'self';
-  script-src 'self'${isDev ? " 'unsafe-eval'" : ''};
-  style-src 'self' 'unsafe-inline' ${STYLE_SRC_HOSTS.join(' ')};
-  connect-src *;
+  script-src 'self'${isDev ? " 'unsafe-eval'" : ''} https://analytics-report.kvantum.guru;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ${STYLE_SRC_HOSTS.join(' ')};
+  connect-src * https://analytics-report.kvantum.guru;
   img-src 'self' blob: data: ${IMG_SRC_HOSTS.join(' ')};
-  font-src 'self' data:;
+  font-src 'self' data: https://fonts.gstatic.com;
   object-src 'none';
   base-uri 'self';
   form-action 'self';
@@ -69,10 +72,21 @@ const securityHeaders = [
 
 const nextConfig = {
   webpack(config) {
+    // YAML loader
     config.module.rules.push({
       test: /\.ya?ml$/,
       use: 'yaml-loader',
     });
+
+    // Fix for Porto/Zod compatibility issues
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      // Alias zod/mini to main zod package
+      'zod/mini': require.resolve('zod'),
+      // Optional: Completely ignore porto if not used
+      'porto': false,
+    };
+
     return config;
   },
 
