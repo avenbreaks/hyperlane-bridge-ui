@@ -26,7 +26,7 @@ const IMG_SRC_HOSTS = [
 ];
 const cspHeader = `
   default-src 'self';
-  script-src 'self'${isDev ? " 'unsafe-eval'" : ''} https://analytics-report.kvantum.guru;
+  script-src 'self'${isDev ? " 'unsafe-eval'" : ''} https://analytics-report.kvantum.guru 'sha256-NzvNrqk5jB9YZATwo5BF4JoRlJ02HsnFikbKXgEPdaQ=';
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ${STYLE_SRC_HOSTS.join(' ')};
   connect-src * https://analytics-report.kvantum.guru;
   img-src 'self' blob: data: ${IMG_SRC_HOSTS.join(' ')};
