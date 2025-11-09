@@ -4,6 +4,7 @@ RPCS=(
   "https://rpc.davinci.bz"
   "https://rpc-bridge.davinci.bz"
   "https://rpc-explorer.davinci.bz"
+  "https://rpc-mainnet.davinci.bz"
 )
 
 test_method() {

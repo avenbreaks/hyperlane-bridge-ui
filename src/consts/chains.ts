@@ -13,6 +13,7 @@ export const chains: ChainMap<ChainMetadata & { mailbox?: Address }> = {
       { http: 'https://rpc.davinci.bz' },
       { http: 'https://rpc-explorer.davinci.bz' },
       { http: 'https://rpc-bridge.davinci.bz' },
+      { http: 'https://rpc-mainnet.davinci.bz' },
     ],
     blockExplorers: [
       {
