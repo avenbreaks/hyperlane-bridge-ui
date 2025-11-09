@@ -9,7 +9,7 @@ export const MAIN_FONT = SpaceGrotesk({
 });
 export const APP_NAME = 'DaVinci Bridge';
 export const APP_DESCRIPTION = 'A DApp for DaVinci Bridge Multichain Route transfers';
-export const APP_URL = 'https://davinci-bridge.vercel.app';
+export const APP_URL = 'https://bridge-apps.davinci.bz';
 export const BRAND_COLOR = Color.primary['800'];
 export const BACKGROUND_COLOR = Color.primary['800'];
 export const BACKGROUND_IMAGE = 'url(/backgrounds/main.svg)';
