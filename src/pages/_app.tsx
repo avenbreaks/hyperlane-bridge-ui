@@ -9,6 +9,7 @@ import { ErrorBoundary } from '../components/errors/ErrorBoundary';
 import { AppLayout } from '../components/layout/AppLayout';
 import { MAIN_FONT } from '../consts/app';
 import { WarpContextInitGate } from '../features/WarpContextInitGate';
+import { CosmosWalletContext } from '../features/wallet/context/CosmosWalletContext';
 import { EvmWalletContext } from '../features/wallet/context/EvmWalletContext';
 import { SolanaWalletContext } from '../features/wallet/context/SolanaWalletContext';
 import { StarknetWalletContext } from '../features/wallet/context/StarknetWalletContext';
@@ -41,12 +42,14 @@ export default function App({ Component, pageProps }: AppProps) {
           <WarpContextInitGate>
             <EvmWalletContext>
               <SolanaWalletContext>
-                <StarknetWalletContext>
-                  <AppLayout>
-                    <Component {...pageProps} />
-                    <Analytics />
-                  </AppLayout>
-                </StarknetWalletContext>
+                <CosmosWalletContext>
+                  <StarknetWalletContext>
+                    <AppLayout>
+                      <Component {...pageProps} />
+                      <Analytics />
+                    </AppLayout>
+                  </StarknetWalletContext>
+                </CosmosWalletContext>
               </SolanaWalletContext>
             </EvmWalletContext>
           </WarpContextInitGate>
