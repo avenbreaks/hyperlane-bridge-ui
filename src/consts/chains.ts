@@ -9,7 +9,11 @@ export const chains: ChainMap<ChainMetadata & { mailbox?: Address }> = {
     name: 'davinci',
     displayName: 'DaVinci Chain',
     nativeToken: { name: 'DaVinci', symbol: 'DCOIN', decimals: 18 },
-    rpcUrls: [{ http: 'https://rpc.davinci.bz' }],
+    rpcUrls: [
+      { http: 'https://rpc.davinci.bz' },
+      { http: 'https://rpc-explorer.davinci.bz' },
+      { http: 'https://rpc-bridge.davinci.bz' },
+    ],
     blockExplorers: [
       {
         name: 'DaVinci Explorer',

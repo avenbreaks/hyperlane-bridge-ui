@@ -3317,7 +3317,11 @@ __metadata:
     wagmi: "npm:^2.12.26"
     yaml: "npm:^2.6.0"
     yaml-loader: "npm:^0.8.1"
+<<<<<<< HEAD
     zod: "patch:zod@npm%3A3.25.76#~/.yarn/patches/zod-npm-3.25.76-7de26333f8.patch"
+=======
+    zod: "npm:^3.22.4"
+>>>>>>> 754e1da (feat: add 3 rpc check isHealty, preview mode)
     zustand: "npm:^4.4.7"
   languageName: unknown
   linkType: soft
@@ -26517,10 +26521,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "zod@npm:3.22.4":
   version: 3.22.4
   resolution: "zod@npm:3.22.4"
   checksum: 10/73622ca36a916f785cf528fe612a884b3e0f183dbe6b33365a7d0fc92abdbedf7804c5e2bd8df0a278e1472106d46674281397a3dd800fa9031dc3429758c6ac
+=======
+"zod@npm:^3.21.2":
+  version: 3.21.4
+  resolution: "zod@npm:3.21.4"
+  checksum: 10/03c79fa4610a35e24119771970be764c6e177a271a225587f86a7fc35d55e94a154d8e1970d23ffe35b567c147262bedbcb53b31aa30eeef2493fbd13e1b4aca
+>>>>>>> 754e1da (feat: add 3 rpc check isHealty, preview mode)
   languageName: node
   linkType: hard
 

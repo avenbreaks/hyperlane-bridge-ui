@@ -22,8 +22,8 @@ davinci:
   protocol: ethereum
   rpcUrls:
     - http: https://rpc.davinci.bz
-    - http: https://rpc-bridge.davinci.bz
     - http: https://rpc-explorer.davinci.bz
+    - http: https://rpc-bridge.davinci.bz
   technicalStack: other
   logoURI: https://raw.githubusercontent.com/davinchi-protocol/branding-kit/refs/heads/main/logo-network/davinci-logo.svg
 
