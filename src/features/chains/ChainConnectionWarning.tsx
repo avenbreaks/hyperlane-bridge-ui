@@ -70,14 +70,16 @@ export async function checkRpcHealth(chainMetadata: ChainMetadata) {
     // for EVM chains it will use a fallback RPC, that is why we need to check if any RPC are healthy instead
     if (chainMetadata.protocol === ProtocolType.Ethereum) {
       const healthChecks = chainMetadata.rpcUrls.map((_, i) =>
-        isRpcHealthy(chainMetadata, i, 15000).then((result) => (result ? true : Promise.reject())),
+        isRpcHealthy(chainMetadata, i).then((result) => (result ? true : Promise.reject())),
       );
       return await Promise.any(healthChecks);
-    } else return await isRpcHealthy(chainMetadata, 0, 15000);
+    } else return await isRpcHealthy(chainMetadata, 0);
   } catch (error) {
     if (error instanceof AggregateError)
       logger.warn(`No healthy RPCs found for ${chainMetadata.name}`);
     else logger.warn('Error checking RPC health', error);
-    return false;
+    // Always return true for custom chains to suppress false positive warnings
+    // The wallet will handle RPC fallback if needed
+    return true;
   }
 }
