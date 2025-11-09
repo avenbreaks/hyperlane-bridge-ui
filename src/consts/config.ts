@@ -11,7 +11,7 @@ const walletConnectProjectId =
   process?.env?.NEXT_PUBLIC_WALLET_CONNECT_ID || '92347c0b62140e27bab13abbb63175e6';
 const transferBlacklist = process?.env?.NEXT_PUBLIC_TRANSFER_BLACKLIST || '';
 const chainWalletWhitelists = JSON.parse(process?.env?.NEXT_PUBLIC_CHAIN_WALLET_WHITELISTS || '{}');
-const rpcOverrides = process?.env?.NEXT_PUBLIC_RPC_OVERRIDES || 'https://rpc-bridge.davinci.bz';
+const rpcOverrides = process?.env?.NEXT_PUBLIC_RPC_OVERRIDES || '';
 
 interface Config {
   addressBlacklist: string[]; // A list of addresses that are blacklisted and cannot be used in the app
